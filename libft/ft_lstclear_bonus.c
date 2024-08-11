@@ -6,13 +6,13 @@
 /*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:43:45 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/30 20:34:27 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/08/11 16:00:35 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+/* void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*node;
 
@@ -24,7 +24,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = node;
 	}
-}
+} */
 
 /* int	main(void)
 {

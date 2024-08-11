@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 12:51:49 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/30 13:58:54 by dasal            ###   ########.fr       */
+/*   Updated: 2024/08/11 16:01:24 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+/* t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(void *content)
 	new->content = content;
 	new->next = NULL;
 	return (new);
-}
+} */
 
 /* int	main(void)
 {

@@ -32,7 +32,7 @@ void	error_exit(char *message);
 void	free_matrix(char **str);
 void	free_stack(t_list **stack);
 //		parsing
-void	check_input(char **av);
+void	check_input(char **av, int ac);
 int		ft_isnum(char *nmb);
 int		check_duplicates(int nmb, char **av, int i);
 //		operations

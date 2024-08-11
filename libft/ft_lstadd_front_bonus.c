@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 13:49:16 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/30 14:49:26 by dasal            ###   ########.fr       */
+/*   Updated: 2024/08/11 16:00:25 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+/* void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;
 	new->next = *lst;
 	*lst = new;
-}
+} */
 
 /* int	main(void)
 {

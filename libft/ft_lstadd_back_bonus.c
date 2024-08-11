@@ -6,13 +6,13 @@
 /*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:34:54 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/04/30 20:34:31 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/08/11 16:00:07 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+/* void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
@@ -27,7 +27,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	while (temp->next)
 		temp = temp->next;
 	temp->next = new;
-}
+} */
 
 /* int	main(void)
 {

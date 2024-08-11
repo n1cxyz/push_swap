@@ -6,7 +6,7 @@
 /*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 22:07:49 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/07/06 23:51:04 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/08/11 15:51:32 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 # include <stdint.h>
 
 //		STRUCT
-typedef struct s_list
+/* typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}					t_list; */
 //		CHECK
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -70,7 +70,7 @@ int		ft_putnbr(long n);
 int		ft_putnbr_hexl(long n);
 int		ft_putnbr_hexu(long n);
 //		LIST
-void	ft_lstadd_back(t_list **lst, t_list *new);
+/* void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
@@ -78,7 +78,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
-int		ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst); */
 //		Get_next_line
 char	*ft_substring(char *str);
 char	*ft_strxjoin(char *s1, char *s2);

@@ -1,7 +1,7 @@
 
 #include "push_swap.h"
 
-void    check_input(char **av)
+void    check_input(char **av, int ac)
 {
 	int 	i;
 	long	tmp;
@@ -13,7 +13,8 @@ void    check_input(char **av)
 		if ((!(ft_isnum(av[i]))) || check_duplicates(tmp, av, i + 1) ||
 		(tmp < -2147483648 || tmp > 2147483647))
 		{
-			//free_matrix(av);
+			if (ac == 2)
+				free_matrix(av);
 			error_exit("Error\n");
 		}
 		i++;
@@ -40,7 +41,7 @@ int	check_duplicates(int nmb, char **av, int i)
 {
 	while (av[i])
 	{
-		if (ft_atoi(av[i] == nmb))
+		if (ft_atoi(av[i]) == nmb)
 			return (1);
 		i++;
 	}

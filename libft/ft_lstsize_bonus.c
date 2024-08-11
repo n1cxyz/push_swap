@@ -6,13 +6,13 @@
 /*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:20:31 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/04/30 19:35:18 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/08/11 16:01:33 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+/* int	ft_lstsize(t_list *lst)
 {
 	int	count;
 
@@ -23,7 +23,7 @@ int	ft_lstsize(t_list *lst)
 		count++;
 	}
 	return (count);
-}
+} */
 
 /*int	main(void)
 {

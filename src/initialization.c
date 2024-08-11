@@ -5,10 +5,11 @@ void    initialize(t_list **stack, char **av)
     t_list  *new;
     int     i;
 
+	i = 0;
     while (av[i])
     {
         new = lstnew(ft_atoi(av[i]));
-        ft_lstadd_back(stack, new);
+        lstadd_back(stack, new);
         i++;
     }
     assign_index(stack);
@@ -54,8 +55,6 @@ t_list	*get_min(t_list **stack)
 
 t_list	**alloc_stack(t_list **stack, char **av, int ac)
 {
-    t_list **stack;
-
     stack = (t_list **)malloc(sizeof(t_list));
     if (!stack)
     {
@@ -63,4 +62,5 @@ t_list	**alloc_stack(t_list **stack, char **av, int ac)
             free_matrix(av);
         exit (1);
     }
+	return (stack);
 }

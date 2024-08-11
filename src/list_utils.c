@@ -69,7 +69,8 @@ void	printList(t_list *lst)
 	while (tmp != NULL)
 	{
 		ft_putnbr_fd(tmp->value, 1);
-        ft_putstr_fd("", 1);
+        ft_putstr_fd(" ", 1);
+		//printf("hello");
 		tmp = tmp->next;
 	}
 }
