@@ -1,14 +1,19 @@
 
 #include "push_swap.h"
 
-/* t_list *lstlast(t_list *lst)
+t_list	*lstlast(t_list *lst)
 {
-    if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
-} */
+    t_list *temp;
+
+	temp = lst;
+	while (temp->next)
+	{
+		temp = temp->next;
+		if (temp->next == NULL)
+			return (temp);
+	}
+	return (temp);
+}
 
 void    lstadd_front(t_list **stack, t_list *new)
 {
@@ -49,13 +54,13 @@ t_list	*lstnew(int value)
 int	lstsize(t_list *lst)
 {
 	size_t	count;
-	t_list	*tmp;
+	t_list	*temp;
 
-	tmp = lst;
+	temp = lst;
 	count = 0;
-	while (tmp)
+	while (temp)
 	{
-		tmp = tmp->next;
+		temp = temp->next;
 		count++;
 	}
 	return (count);
@@ -69,6 +74,20 @@ void	printList(t_list *lst)
 	while (tmp != NULL)
 	{
 		ft_putnbr_fd(tmp->value, 1);
+        ft_putstr_fd(" ", 1);
+		//printf("hello");
+		tmp = tmp->next;
+	}
+}
+
+void	printList_index(t_list *lst)
+{
+	t_list	*tmp;
+
+	tmp = lst;
+	while (tmp != NULL)
+	{
+		ft_putnbr_fd(tmp->index, 1);
         ft_putstr_fd(" ", 1);
 		//printf("hello");
 		tmp = tmp->next;

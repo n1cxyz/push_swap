@@ -1,5 +1,19 @@
 #include "push_swap.h"
 
+int	a_is_sorted(t_list **stack)
+{
+	t_list *temp;
+
+	temp = *stack;
+	while (temp->next && temp)
+	{
+		if (temp->next > temp->next->next)
+			return (-1);
+		temp = temp->next;
+	}
+	return (1);
+}
+
 void    error_exit(char *message)
 {
 	ft_putstr_fd(message, STDOUT_FILENO);
