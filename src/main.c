@@ -20,11 +20,7 @@ int	main(int ac, char **av)
         *stack_b = NULL;
         initialize(stack_a, av);
         if (a_is_sorted(stack_a) == 1)
-        {
-            free_stack(stack_a);
-            free_stack(stack_b);
-            return (0);
-        }
+            free_exit(stack_a, stack_b);
 		/*if (lstsize(stack_a) < 6)
             sort_small_stack(stack_a, stack_b);
         else

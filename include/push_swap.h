@@ -34,6 +34,7 @@ int		a_is_sorted(t_list **stack);
 void	error_exit(char *message);
 void	free_matrix(char **str);
 void	free_stack(t_list **stack);
+void	free_exit(t_list **stack_a, t_list **stack_b);
 //		parsing
 void	check_input(char **av, int ac);
 int		ft_isnum(char *nmb);

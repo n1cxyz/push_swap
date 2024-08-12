@@ -20,6 +20,13 @@ void    error_exit(char *message)
 	exit(1);
 }
 
+void	free_exit(t_list **stack_a, t_list **stack_b)
+{
+	free_stack(stack_a);
+    free_stack(stack_b);
+	exit(0);
+}
+
 void    free_matrix(char **str)
 {
     int	i;
