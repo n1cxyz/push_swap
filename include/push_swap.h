@@ -27,8 +27,8 @@ void	lstadd_back(t_list **stack, t_list *new);
 t_list	*lstnew(int value);
 int		lstsize(t_list *lst);
 t_list	*lstlast(t_list *lst);
-void	printList(t_list *lst);
-void	printList_index(t_list *lst);
+void	printlist(t_list *lst);
+void	printlist_index(t_list *lst);
 //		utils
 int		a_is_sorted(t_list **stack);
 void	error_exit(char *message);

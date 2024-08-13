@@ -1,16 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasal <dasal@student.42berlin.de>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/13 12:38:13 by dasal             #+#    #+#             */
+/*   Updated: 2024/08/13 12:38:15 by dasal            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    check_input(char **av, int ac)
+void	check_input(char **av, int ac)
 {
-	int 	i;
+	int		i;
 	long	tmp;
 
 	i = 0;
 	while (av[i])
 	{
 		tmp = ft_atoi(av[i]);
-		if ((!(ft_isnum(av[i]))) || check_duplicates(tmp, av, i + 1) ||
+		if ((!(ft_isnum(av[i]))) || check_duplicates(tmp, av, i + 1) || 
 		(tmp < -2147483648 || tmp > 2147483647))
 		{
 			if (ac == 2)

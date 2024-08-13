@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   initialization.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasal <dasal@student.42berlin.de>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/13 12:38:00 by dasal             #+#    #+#             */
+/*   Updated: 2024/08/13 12:38:02 by dasal            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    initialize(t_list **stack, char **av)
+void	initialize(t_list **stack, char **av)
 {
-    t_list  *new;
-    int     i;
+	t_list	*new;
+	int		i;
 
 	i = 0;
-    while (av[i])
-    {
-        new = lstnew(ft_atoi(av[i]));
-        lstadd_back(stack, new);
-        i++;
-    }
-    assign_index(stack);
+	while (av[i])
+	{
+		new = lstnew(ft_atoi(av[i]));
+		lstadd_back(stack, new);
+		i++;
+	}
+	assign_index(stack);
 }
 
 void	assign_index(t_list **stack)
@@ -31,11 +43,11 @@ void	assign_index(t_list **stack)
 
 t_list	*get_min(t_list **stack)
 {
-    int		has_min;
+	int		has_min;
 	t_list	*lst;
 	t_list	*min;
 
-    lst = *stack;
+	lst = *stack;
 	min = NULL;
 	has_min = 0;
 	if (lst)
@@ -55,12 +67,12 @@ t_list	*get_min(t_list **stack)
 
 t_list	**alloc_stack(t_list **stack, char **av, int ac)
 {
-    stack = (t_list **)malloc(sizeof(t_list));
-    if (!stack)
-    {
-        if (ac == 2)
-            free_matrix(av);
-        exit (1);
-    }
+	stack = (t_list **)malloc(sizeof(t_list));
+	if (!stack)
+	{
+		if (ac == 2)
+			free_matrix(av);
+		exit (1);
+	}
 	return (stack);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_1.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasal <dasal@student.42berlin.de>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/13 12:38:49 by dasal             #+#    #+#             */
+/*   Updated: 2024/08/13 12:38:51 by dasal            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	push(t_list **stack_a, t_list **stack_b)
@@ -46,8 +58,8 @@ int	rotate(t_list **stack)
 
 int	reverserotate(t_list **stack)
 {
-	t_list *start;
-	t_list *end;
+	t_list	*start;
+	t_list	*end;
 
 	if (lstsize(*stack) < 2)
 		return (0);
@@ -73,7 +85,7 @@ int	swap(t_list **stack)
 	int		index;
 	t_list	*next;
 	t_list	*temp;
-	
+
 	if (lstsize(*stack) < 2)
 		return (0);
 	temp = *stack;

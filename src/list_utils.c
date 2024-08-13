@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list_utils.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasal <dasal@student.42berlin.de>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/13 12:40:24 by dasal             #+#    #+#             */
+/*   Updated: 2024/08/13 12:40:26 by dasal            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
 t_list	*lstlast(t_list *lst)
 {
-    t_list *temp;
+	t_list	*temp;
 
 	temp = lst;
 	while (temp->next)
@@ -15,15 +26,15 @@ t_list	*lstlast(t_list *lst)
 	return (temp);
 }
 
-void    lstadd_front(t_list **stack, t_list *new)
+void	lstadd_front(t_list **stack, t_list *new)
 {
-    new->next = *stack;
-    *stack = new;
+	new->next = *stack;
+	*stack = new;
 }
 
-void    lstadd_back(t_list **stack, t_list *new)
+void	lstadd_back(t_list **stack, t_list *new)
 {
-    t_list	*temp;
+	t_list	*temp;
 
 	if (!stack || !new)
 		return ;
@@ -66,7 +77,7 @@ int	lstsize(t_list *lst)
 	return (count);
 }
 
-void	printList(t_list *lst)
+void	printlist(t_list *lst)
 {
 	t_list	*tmp;
 
@@ -74,13 +85,13 @@ void	printList(t_list *lst)
 	while (tmp != NULL)
 	{
 		ft_putnbr_fd(tmp->value, 1);
-        ft_putstr_fd(" ", 1);
+		ft_putstr_fd(" ", 1);
 		//printf("hello");
 		tmp = tmp->next;
 	}
 }
 
-void	printList_index(t_list *lst)
+void	printlist_index(t_list *lst)
 {
 	t_list	*tmp;
 
@@ -88,8 +99,7 @@ void	printList_index(t_list *lst)
 	while (tmp != NULL)
 	{
 		ft_putnbr_fd(tmp->index, 1);
-        ft_putstr_fd(" ", 1);
-		//printf("hello");
+		ft_putstr_fd(" ", 1);
 		tmp = tmp->next;
 	}
 }

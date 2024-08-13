@@ -2,8 +2,8 @@ NAME		= push_swap
 CC			= gcc
 BIN			= bin
 SRC			= src/main.c src/utils_0.c src/list_utils.c \
-src/parsing.c src/operations.c src/initialization.c \
-src/sorting.c src/utils_1.c src/utils_2.c src/utils_3.c src/utils_4.c src/utils_5.c
+src/parsing.c src/initialization.c src/sorting.c \
+src/utils_1.c src/utils_2.c src/utils_3.c src/utils_4.c src/utils_5.c
 OBJS		= $(SRC:src/%c=$(BIN)/%o)
 INCS		= include
 LIBFT		= libft
@@ -14,6 +14,8 @@ IFLAGS		= -I$(INCS) -I$(LIBFT_INCS)
 RM			= rm -rf
 VALGRIND	= @valgrind --leak-check=full --show-leak-kinds=all
 #--track-origins=yes --quiet --tool=memcheck --keep-debuginfo=yes
+
+all: $(NAME)
 
 $(NAME): ${BIN} ${OBJS} | ${LIBFT}
 	${CC} ${CFLAGS} ${OBJS} ${LFLAGS} -o ${NAME}
