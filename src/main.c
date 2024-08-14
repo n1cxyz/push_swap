@@ -36,6 +36,8 @@ int	main(int ac, char **av)
 		printlist(*stack_a);
 		free_stack(stack_a);
 		free(stack_b);
+		if (ac == 2)
+			free_matrix(av);
 	}
 	return (0);
 }
