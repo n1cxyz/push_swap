@@ -67,12 +67,16 @@ t_list	*get_min(t_list **stack)
 
 t_list	**alloc_stack(t_list **stack, char **av, int ac)
 {
-	stack = (t_list **)malloc(sizeof(t_list));
-	if (!stack)
+	if (stack == NULL)
 	{
-		if (ac == 2)
-			free_matrix(av);
-		exit (1);
+		stack = (t_list **)malloc(sizeof(t_list));
+		if (!stack)
+		{
+			if (ac == 2)
+				free_matrix(av);
+			exit (1);
+		}
 	}
+	*stack = NULL;
 	return (stack);
 }

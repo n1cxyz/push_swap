@@ -20,15 +20,13 @@ int	main(int ac, char **av)
 		t_list	**stack_b;
 
 		av++;
+		stack_a = NULL;
+		stack_b = NULL;
 		if (ac == 2)
 			av = ft_split(*av, ' ');
 		check_input(av, ac);
-		//stack_a = alloc_stack(stack_a, av, ac);
-		//stack_b = alloc_stack(stack_b, av, ac);
-		stack_a = (t_list **)malloc(sizeof(t_list));
-		stack_b = (t_list **)malloc(sizeof(t_list));
-		*stack_a = NULL;
-		*stack_b = NULL;
+		stack_a = alloc_stack(stack_a, av, ac);
+		stack_b = alloc_stack(stack_b, av, ac);
 		initialize(stack_a, av);
 		if (a_is_sorted(stack_a) == 1)
 			free_exit(stack_a, stack_b);
