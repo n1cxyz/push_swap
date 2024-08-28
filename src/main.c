@@ -30,7 +30,10 @@ int	main(int ac, char **av)
 		initialize(stack_a, av);
 		if (a_is_sorted(stack_a) == 1)
 			free_exit(stack_a, stack_b);
-		sort_big_stack(stack_a, stack_b);
+		if ((lstsize(*stack_a)) > 5)
+			sort_big_stack(stack_a, stack_b);
+		else
+			sort_small_stack(stack_a, stack_b);
 		printlist(*stack_a);
 		free_stack(stack_a);
 		free(stack_b);

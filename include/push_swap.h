@@ -57,4 +57,5 @@ int		swap_b(t_list **stack_b);
 int		swap_ab(t_list **stack_a, t_list **stack_b);
 //		sorting
 void    sort_big_stack(t_list **stack_a, t_list **stack_b);
+void	sort_small_stack(t_list **stack_a, t_list **stack_b);
 int		get_bits(t_list **stack);

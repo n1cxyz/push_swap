@@ -2,8 +2,9 @@ NAME		= push_swap
 CC			= gcc
 BIN			= bin
 SRC			= src/main.c src/utils_0.c src/list_utils.c \
-src/parsing.c src/initialization.c src/sorting.c \
-src/utils_1.c src/utils_2.c src/utils_3.c src/utils_4.c src/utils_5.c
+src/parsing.c src/initialization.c src/sorting_big.c \
+src/utils_1.c src/utils_2.c src/utils_3.c src/utils_4.c src/utils_5.c\
+src/sorting_small.c
 OBJS		= $(SRC:src/%c=$(BIN)/%o)
 INCS		= include
 LIBFT		= libft
