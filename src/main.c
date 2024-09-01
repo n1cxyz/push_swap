@@ -34,12 +34,7 @@ int	main(int ac, char **av)
 			sort_big_stack(stack_a, stack_b);
 		else 
 			sort_small_stack(stack_a, stack_b);
-		printlist(*stack_a);
-		printf("\n");
-		free_stack(stack_a);
-		free(stack_b);
-		if (ac == 2)
-			free_matrix(av);
+		free_exit(stack_a, stack_b, ac, av);
 	}
 	return (0);
 }
