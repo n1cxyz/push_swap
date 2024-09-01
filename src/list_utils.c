@@ -86,7 +86,6 @@ void	printlist(t_list *lst)
 	{
 		ft_putnbr_fd(tmp->value, 1);
 		ft_putstr_fd(" ", 1);
-		//printf("hello");
 		tmp = tmp->next;
 	}
 }

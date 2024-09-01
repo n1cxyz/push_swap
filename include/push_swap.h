@@ -8,6 +8,9 @@
 #include <sys/wait.h>
 #include "libft.h"
 
+#define MIN -2147483648
+#define MAX 2147483647
+
 typedef struct s_list
 {
 	int             value;
@@ -34,7 +37,7 @@ int		a_is_sorted(t_list **stack);
 void	error_exit(char *message);
 void	free_matrix(char **str);
 void	free_stack(t_list **stack);
-void	free_exit(t_list **stack_a, t_list **stack_b);
+void	free_exit(t_list **stack_a, t_list **stack_b, int ac, char **av);
 //		parsing
 void	check_input(char **av, int ac);
 int		ft_isnum(char *nmb);
@@ -58,4 +61,7 @@ int		swap_ab(t_list **stack_a, t_list **stack_b);
 //		sorting
 void    sort_big_stack(t_list **stack_a, t_list **stack_b);
 void	sort_small_stack(t_list **stack_a, t_list **stack_b);
+void	sort_three(t_list **stack_a);
+int		get_direction(t_list *temp);
 int		get_bits(t_list **stack);
+int		get_minN(t_list *stack_a);

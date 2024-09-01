@@ -19,7 +19,7 @@ int	a_is_sorted(t_list **stack)
 	temp = *stack;
 	while (temp->next && temp)
 	{
-		if (temp->next > temp->next->next)
+		if (temp->value > temp->next->value)
 			return (-1);
 		temp = temp->next;
 	}
@@ -32,10 +32,15 @@ void	error_exit(char *message)
 	exit(1);
 }
 
-void	free_exit(t_list **stack_a, t_list **stack_b)
+void	free_exit(t_list **stack_a, t_list **stack_b, int ac, char **av)
 {
-	free_stack(stack_a);
+	/* free_stack(stack_a);
 	free_stack(stack_b);
+	free(stack_b); */
+	free_stack(stack_a);
+	free(stack_b);
+	if (ac == 2)
+		free_matrix(av);
 	exit(0);
 }
 

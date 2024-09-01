@@ -12,44 +12,87 @@
 
 #include "push_swap.h"
 
-void	sort_small_stack(t_list **stack_a, t_list **stack_b)
+void	sort_three(t_list **stack_a)
 {
-	t_list	*topElementA;
-	t_list	*topElementB;
-	int		sizeA;
-	int		sizeB;
-	int		i;
-	int		j;
-
-	sizeA = lstsize(*stack_a);
-	i = 0;
-	while (i < sizeA)
+	while (a_is_sorted(stack_a) != 1)
 	{
-		topElementA = *stack_a;
-		topElementB = *stack_b;
-		sizeB = lstsize(*stack_b);
-		j = 0;
-		//printf("B:%d\n", topElementB->index);
-		//printf("A:%d\n", topElementA->index);
-		while ((j < sizeB) && (topElementB->index > topElementA->index))
+		if ((*stack_a)->value > (*stack_a)->next->value)
+			swap_a(stack_a);
+		else
+			reverserotate_a(stack_a);
+	}
+}
+
+int	get_direction(t_list *temp)
+{
+	int	lstSize;
+	int	minIndex;
+	int	i;
+	int	min;
+
+	min = MAX;
+	i = 0;
+	minIndex = 0;
+	lstSize = lstsize(temp) / 2;
+	while (temp)
+	{
+		if (temp->value < min)
 		{
-			//printf("hello\n");
-			push_a(stack_a, stack_b);
-			rotate_a(stack_a);
-			j++;
+			min = temp->value;
+			minIndex = i;
 		}
-		push_b(stack_a, stack_b);
-		printlist(*stack_a);
-		printf("\n");
-		printlist(*stack_b);
-		printf("\n");
+		temp = temp->next;
 		i++;
 	}
-	sizeB = lstsize(*stack_b);
-	i = 0;
-	while (i < sizeB)
+	if (minIndex < lstSize)
+		return (1);
+	else
+		return (0);
+}
+
+int	get_minN(t_list *stack_a)
+{
+	int min;
+
+	min = stack_a->value;
+	stack_a = stack_a->next;
+	while (stack_a)
 	{
-		push_a(stack_a, stack_b);
-		i++;
+		if (stack_a->value < min)
+			min = stack_a->value;
+		stack_a = stack_a->next;
+	}
+	return (min);
+}
+
+void	sort_small_stack(t_list **stack_a, t_list **stack_b)
+{
+	int	min;
+	int direction;
+
+	if (lstsize(*stack_a) == 2)
+		swap_a(stack_a);
+	else if (lstsize(*stack_a) == 3)
+		sort_three(stack_a);
+	else
+	{
+		while (lstsize(*stack_a) >= 4)
+		{
+			direction = get_direction(*stack_a);
+			min = get_minN(*stack_a);
+			while ((*stack_a)->value != min)
+			{
+				if (direction)
+					rotate_a(stack_a);
+				else
+					reverserotate_a(stack_a);
+			}
+			push_b(stack_a, stack_b);
+		}
+		sort_three(stack_a);
+		while (lstsize(*stack_b) > 0)
+		{
+			push_a(stack_a, stack_b);
+		}
 	}
 }

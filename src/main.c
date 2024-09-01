@@ -29,12 +29,13 @@ int	main(int ac, char **av)
 		stack_b = alloc_stack(stack_b, av, ac);
 		initialize(stack_a, av);
 		if (a_is_sorted(stack_a) == 1)
-			free_exit(stack_a, stack_b);
+			free_exit(stack_a, stack_b, ac, av);
 		if ((lstsize(*stack_a)) > 5)
 			sort_big_stack(stack_a, stack_b);
-		else
+		else 
 			sort_small_stack(stack_a, stack_b);
 		printlist(*stack_a);
+		printf("\n");
 		free_stack(stack_a);
 		free(stack_b);
 		if (ac == 2)
