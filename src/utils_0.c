@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_0.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasal <dasal@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 12:38:45 by dasal             #+#    #+#             */
-/*   Updated: 2024/08/13 12:38:47 by dasal            ###   ########.fr       */
+/*   Updated: 2024/09/01 17:07:29 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,12 @@ int	a_is_sorted(t_list **stack)
 
 void	error_exit(char *message)
 {
-	ft_putstr_fd(message, STDOUT_FILENO);
+	ft_putstr_fd(message, STDERR_FILENO);
 	exit(1);
 }
 
 void	free_exit(t_list **stack_a, t_list **stack_b, int ac, char **av)
 {
-	/* free_stack(stack_a);
-	free_stack(stack_b);
-	free(stack_b); */
 	free_stack(stack_a);
 	free(stack_b);
 	if (ac == 2)
