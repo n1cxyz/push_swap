@@ -1,5 +1,5 @@
 NAME		= push_swap
-CC			= gcc
+CC			= cc
 BIN			= bin
 SRC			= src/main.c src/utils_0.c src/list_utils.c \
 src/parsing.c src/initialization.c src/sorting_big.c \

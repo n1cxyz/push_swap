@@ -20,6 +20,8 @@ int	main(int ac, char **av)
 		t_list	**stack_b;
 
 		av++;
+		if (**av == '\0')
+			error_exit("Error\n");
 		stack_a = NULL;
 		stack_b = NULL;
 		if (ac == 2)
