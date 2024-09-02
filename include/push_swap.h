@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasal <dasal@student.42berlin.de>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/02 12:45:00 by dasal             #+#    #+#             */
+/*   Updated: 2024/09/02 12:45:02 by dasal            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdio.h>
 #include <errno.h>
@@ -13,10 +25,10 @@
 
 typedef struct s_list
 {
-	int             value;
-	int             index;
-	struct s_list   *next;
-}                   t_list;
+	int				value;
+	int				index;
+	struct s_list	*next;
+}					t_list;
 
 //     	initialization
 void	initialize(t_list **stack, char **av);
@@ -59,7 +71,7 @@ int		swap_a(t_list **stack_a);
 int		swap_b(t_list **stack_b);
 int		swap_ab(t_list **stack_a, t_list **stack_b);
 //		sorting
-void    sort_big_stack(t_list **stack_a, t_list **stack_b);
+void	sort_big_stack(t_list **stack_a, t_list **stack_b);
 void	sort_small_stack(t_list **stack_a, t_list **stack_b);
 void	sort_small(t_list **stack_a, t_list **stack_b);
 void	sort_three(t_list **stack_a);
