@@ -61,7 +61,8 @@ int		swap_ab(t_list **stack_a, t_list **stack_b);
 //		sorting
 void    sort_big_stack(t_list **stack_a, t_list **stack_b);
 void	sort_small_stack(t_list **stack_a, t_list **stack_b);
+void	sort_small(t_list **stack_a, t_list **stack_b);
 void	sort_three(t_list **stack_a);
 int		get_direction(t_list *temp);
 int		get_bits(t_list **stack);
-int		get_minN(t_list *stack_a);
+int		get_min_n(t_list *stack_a);

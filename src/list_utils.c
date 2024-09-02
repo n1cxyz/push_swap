@@ -76,29 +76,3 @@ int	lstsize(t_list *lst)
 	}
 	return (count);
 }
-
-void	printlist(t_list *lst)
-{
-	t_list	*tmp;
-
-	tmp = lst;
-	while (tmp != NULL)
-	{
-		ft_putnbr_fd(tmp->value, 1);
-		ft_putstr_fd(" ", 1);
-		tmp = tmp->next;
-	}
-}
-
-void	printlist_index(t_list *lst)
-{
-	t_list	*tmp;
-
-	tmp = lst;
-	while (tmp != NULL)
-	{
-		ft_putnbr_fd(tmp->index, 1);
-		ft_putstr_fd(" ", 1);
-		tmp = tmp->next;
-	}
-}

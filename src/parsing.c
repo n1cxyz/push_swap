@@ -22,7 +22,7 @@ void	check_input(char **av, int ac)
 	{
 		tmp = ft_atoi(av[i]);
 		if ((!(ft_isnum(av[i]))) || check_duplicates(tmp, av, i + 1) || 
-		(tmp < MIN || tmp > MAX))
+			(tmp < MIN || tmp > MAX))
 		{
 			if (ac == 2)
 				free_matrix(av);

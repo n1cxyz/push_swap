@@ -14,11 +14,11 @@
 
 int	main(int ac, char **av)
 {
+	t_list	**stack_a;
+	t_list	**stack_b;
+
 	if (ac > 1)
 	{
-		t_list	**stack_a;
-		t_list	**stack_b;
-
 		av++;
 		if (**av == '\0')
 			error_exit("Error\n");
